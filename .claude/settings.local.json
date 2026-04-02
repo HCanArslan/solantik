@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm ls:*)",
+      "Bash(node -e \"const config = require\\(''./tailwind.config.js''\\); console.log\\(typeof config\\);\")",
+      "Bash(find C:UserspcDocumentsProjectsSolantik.next -name *.css)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(netstat -ano)",
+      "Bash(findstr :3000)",
+      "Bash(curl -s http://localhost:3000)",
+      "Bash(curl -s http://localhost:3000/_next/static/chunks/app_globals_0jn8.0u.css)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(findstr \":3000\\\\|:3001\")",
+      "Bash(taskkill /PID 48328 /F)",
+      "Bash(cmd /c \"taskkill /PID 48328 /F\")",
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(curl -s http://localhost:3001/_next/static/chunks/app_globals_0jn8.0u.css)",
+      "Bash(findstr \"3000\\\\|62283\\\\|50860\")"
+    ]
+  }
+}
