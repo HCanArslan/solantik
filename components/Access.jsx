@@ -34,7 +34,7 @@ const Access = () => {
           </div>
 
           <footer className="mt-32 pt-8 w-full border-t border-[var(--border)] flex flex-col md:flex-row justify-between items-center text-[10px] text-[var(--muted)] uppercase tracking-widest font-medium gap-4 reveal-item">
-            <span>© 2025 Solantik Siber Güvenlik. Tüm hakları saklıdır.</span>
+            <span>© 2026 Solantik Siber Güvenlik. Tüm hakları saklıdır.</span>
             <span className="hidden md:inline text-[var(--border)]">•</span>
             <span>Bu web sitesi çerez kullanmamaktadır.</span>
           </footer>
