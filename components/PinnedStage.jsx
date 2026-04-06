@@ -15,9 +15,8 @@ const PinnedStage = () => {
       const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
       // Hero Load Animation
-      gsap.to('#phase-1-content .line-content', { yPercent: 0, duration: 1.1, stagger: 0.15, ease: 'power3.out', delay: 0.2 });
-      gsap.to('#ui-top, #ui-bottom', { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.5 });
-      gsap.to('#hero-descriptor, #hero-ctas', { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: 'power2.out', delay: 0.8 });
+      gsap.to('#ui-top, #ui-bottom', { opacity: 1, y: 0, duration: 1, ease: 'power2.out', delay: 0.3 });
+      gsap.to('#hero-solantik, #hero-headline, #hero-descriptor, #hero-ctas', { opacity: 1, y: 0, duration: 1, stagger: 0.15, ease: 'power3.out', delay: 0.4 });
 
       // Main Timeline
       gsap.set('.feature-card', { opacity: 0 });
@@ -110,17 +109,14 @@ const PinnedStage = () => {
         {/* Phase 1: Arrival */}
         <div id="phase-1-content" className="absolute flex flex-col items-center justify-center text-center w-full pointer-events-auto px-4">
           <div className="w-full max-w-[980px] mx-auto flex flex-col items-center">
-            <h2 className="text-3xl md:text-5xl lg:text-7xl tracking-tight font-medium flex flex-col items-center mb-6 drop-shadow-2xl">
-              <span className="line-wrapper">
-                <span className="line-content whitespace-nowrap text-[var(--fg)] font-display opacity-1" style={{ transform: 'translateY(125%)' }}>
-                  Sistemleriniz Saldırıya
-                </span>
-              </span>
-              <span className="line-wrapper">
-                <span className="line-content whitespace-nowrap text-[var(--muted)] font-display opacity-1" style={{ transform: 'translateY(125%)' }}>
-                  Hazır Mı?
-                </span>
-              </span>
+            <div id="hero-solantik" className="mb-5 flex items-center justify-center gap-3 text-xs tracking-[0.5em] uppercase text-[var(--accent)] font-medium font-mono opacity-0 translate-y-[10px]">
+              <span className="w-2 h-2 bg-[var(--accent)] inline-block animate-pulse"></span>
+              SOLANTIK
+              <span className="w-2 h-2 bg-[var(--accent)] inline-block animate-pulse"></span>
+            </div>
+            <h2 id="hero-headline" className="text-3xl md:text-5xl lg:text-7xl tracking-tight font-medium font-display flex flex-col items-center mb-6 drop-shadow-2xl opacity-0 translate-y-[20px]">
+              <span className="whitespace-nowrap text-[var(--fg)]">Sistemleriniz Saldırıya</span>
+              <span className="whitespace-nowrap text-[var(--muted)]">Hazır Mı?</span>
             </h2>
 
             <div className="flex flex-col items-center gap-4 mt-2 opacity-0 translate-y-[15px]" id="hero-descriptor">

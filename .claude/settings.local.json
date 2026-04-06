@@ -17,7 +17,20 @@
       "Bash(cmd /c \"taskkill /PID 48328 /F\")",
       "Bash(curl -s http://localhost:3001)",
       "Bash(curl -s http://localhost:3001/_next/static/chunks/app_globals_0jn8.0u.css)",
-      "Bash(findstr \"3000\\\\|62283\\\\|50860\")"
+      "Bash(findstr \"3000\\\\|62283\\\\|50860\")",
+      "Bash(curl -s http://localhost:64670)",
+      "Bash(findstr \":300\")",
+      "Bash(findstr \"LISTENING\")",
+      "Bash(taskkill /PID 51696 /F)",
+      "Bash(cmd /c \"taskkill /PID 51696 /F\")",
+      "Bash(cmd /c \"taskkill /F /PID 51696\")",
+      "Bash(cmd /c \"wmic process where ProcessId=51696 get ProcessId,CommandLine 2>nul\")",
+      "Bash(cmd /c \"wmic process where \"\"CommandLine like ''%next%'' or CommandLine like ''%node%''\"\" get ProcessId,CommandLine 2>nul\")",
+      "Bash(cmd /c \"tasklist | findstr node\")",
+      "Bash(cmd /c \"taskkill /F /T /PID 51696 && echo killed\")",
+      "Bash(cmd /c \"for /f \"\"tokens=5\"\" %a in \\(''netstat -ano ^| findstr :3001 ^| findstr LISTENING''\\) do taskkill /F /PID %a\")",
+      "Bash(powershell -Command \"Stop-Process -Id 51696 -Force -ErrorAction SilentlyContinue; Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_OwningProcess -Force -ErrorAction SilentlyContinue }; Write-Host ''Done''\")",
+      "Bash(powershell -Command \"Stop-Process -Id 51696 -Force; Start-Sleep 1; \\(Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue\\).Count\")"
     ]
   }
 }
