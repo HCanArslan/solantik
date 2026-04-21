@@ -30,7 +30,8 @@
       "Bash(cmd /c \"taskkill /F /T /PID 51696 && echo killed\")",
       "Bash(cmd /c \"for /f \"\"tokens=5\"\" %a in \\(''netstat -ano ^| findstr :3001 ^| findstr LISTENING''\\) do taskkill /F /PID %a\")",
       "Bash(powershell -Command \"Stop-Process -Id 51696 -Force -ErrorAction SilentlyContinue; Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_OwningProcess -Force -ErrorAction SilentlyContinue }; Write-Host ''Done''\")",
-      "Bash(powershell -Command \"Stop-Process -Id 51696 -Force; Start-Sleep 1; \\(Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue\\).Count\")"
+      "Bash(powershell -Command \"Stop-Process -Id 51696 -Force; Start-Sleep 1; \\(Get-NetTCPConnection -LocalPort 3001 -ErrorAction SilentlyContinue\\).Count\")",
+      "Bash(curl -s -I http://localhost:3000/)"
     ]
   }
 }
